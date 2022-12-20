@@ -1,0 +1,36 @@
+services:
+  nginx:
+    image: nginx:latest
+    container_name: sharex-gallery
+    hostname: nginx
+    restart: always
+    depends_on:
+      - php
+    networks:
+      - default
+      - internal
+    volumes:
+      - ./app:/var/www/html/:ro
+      - ./config/nginx/templates:/etc/nginx/templates:ro
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik"
+      - "traefik.http.routers.sharex-gallery.rule=Host(`example.com`)"
+      - "traefik.http.routers.sharex-gallery.tls=true"
+    restart: always
+
+  php:
+    image: php:8.1-fpm
+    container_name: sharex-gallery-php
+    hostname: php
+    networks:
+      - internal
+    volumes:
+      - ./app:/var/www/html/:rw
+    restart: always
+
+networks:
+  internal:
+    name: sharex-gallery
+  default:
+    name: traefik

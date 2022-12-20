@@ -1,0 +1,105 @@
+/* This file contains CSS for the base HTML file
+    It should be included in every html page served */
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+/* Global input/textarea styles */
+input, textarea {
+	color: white;
+	background-color: rgb(24, 26, 27);
+}
+
+/* Global button styles */
+button {
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+/* Global HTML/BODY styles */
+html, body {
+	font-family: 'Ubuntu', sans-serif;
+
+	background-color: rgb(24, 26, 27);
+	overflow-x: hidden;
+	color: white;
+
+	margin: 0;
+	padding: 0;
+}
+
+/* Applies to every element on the page */
+* {
+	text-decoration: none;
+	font-weight: 100;
+}
+
+/* Applies to every A element */
+* a {
+	color: #007bff;
+}
+
+/* Container wrapper */
+.container {
+	display: flex;
+	flex-flow: row;
+	flex-direction: column;
+
+	justify-content: center;
+	align-items: center;
+}
+
+/* Header (navbar) styles */
+header {
+	background-color: rgb(24, 26, 27);
+	margin: 0px auto;
+
+	position: sticky;
+	top: 0;
+
+	padding: 20px;
+	z-index: 9;
+}
+
+header h1, header p {
+	text-align: center;
+	margin-top: 0px;
+}
+
+/* Header-content (navbar hyperlinks) */
+.header-content {
+	display: flex;
+	flex-direction: row;
+
+	width: max-content;
+	margin: 0 auto;
+}
+
+.header-content a, .header-content button {
+	margin: 0 5px;
+}
+
+/* Main page content */
+.main-content {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+
+/* Scrollbar */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+	background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555; 
+}

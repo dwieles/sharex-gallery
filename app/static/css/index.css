@@ -1,0 +1,75 @@
+/* Input fields styling */
+input, textarea {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+/* Also style buttons */
+button {
+	width: 100%;
+	background-color: #2e56e6;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+/* Flex-direction the navbar horizontally */
+.uploader-tabs {
+	display: flex;
+	flex-direction: row;
+}
+
+/* Style the uploader section's buttons */
+.uploader-tabs button {
+	background-color: inherit;
+	color: white;
+	
+	padding: 14px 16px;
+	transition: 0.3s;
+	width: 50%;
+	margin: 0;
+}
+
+/* Make the currently selected uploader button black */
+.uploader-tabs .active {
+	background-color: black;
+}
+
+/* Set the background to black on hover */
+.uploader-tabs button:hover {
+	background-color: #000;
+}
+
+/* Style the main uploader section */
+.main-uploader {
+	width: 50vw;
+	margin: 25px auto;
+	background-color: rgb(29, 30, 31);
+}
+
+/* Center the file uploaders description */
+.uploader-file-description {
+	display: flex;
+	flex-direction: column;
+	
+	justify-content: center;
+	align-items: center;
+	
+	margin-top: 1vh;
+}
+
+/* Style the text and url uploaders form */
+.uploader-text form, .uploader-url form {
+	display: flex;
+	flex-direction: column;
+	
+	margin: 2vh;
+}
